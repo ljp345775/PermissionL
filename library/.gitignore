@@ -3,3 +3,5 @@
 *.iml
 .project
 /local.properties
+/src/test
+/src/androidTest

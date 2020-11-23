@@ -2,6 +2,26 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'com.novoda.bintray-release' // must be applied after your artifact generating plugin (eg. java / com.android.library)
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9.2'
+    }
+}
+
+publish{
+    userOrg = "ljp345775"
+    groupId = "com.ljp.permissionl"
+    artifactId = "permissionl"
+    publishVersion = "1.0.0"
+    desc = "根据第一行代码实现申请权限"
+    website = "https://github.com/ljp345775/PermissionL.git"
+}
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
