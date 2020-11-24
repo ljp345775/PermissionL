@@ -12,15 +12,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btn_request.setOnClickListener {
-            L.request(this, android.Manifest.permission.CALL_PHONE) { b, list ->
+    L.request(this, android.Manifest.permission.CALL_PHONE) { b, list ->
 
-                if (b) {
-                    Toast.makeText(this, "申请成功", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(this, "list:${list[0]}", Toast.LENGTH_SHORT).show()
-                }
+        if (b) {
+            Toast.makeText(this, "申请成功", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "list:${list[0]}", Toast.LENGTH_SHORT).show()
+        }
 
-            }
+    }
         }
     }
 }
